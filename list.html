@@ -4,7 +4,135 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+		/>
+		<title>Home - Pet Inventory</title>
 	</head>
-	<body> </body>
+	<body>
+		<nav class="navbar navbar-expand-lg bg-body-secondary">
+			<div class="container">
+				<a class="navbar-brand" href="/">
+					<img
+						src="/img/puppy-inventory-tutorial-logo.png"
+						alt="Logo"
+						width="30"
+						height="24"
+						class="d-inline-block align-text-top"
+					/>
+					Pet Inventory
+				</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li
+							style="width: fit-content"
+							class="nav-item d-flex align-items-center text-tertiary px-3 me-2 my-1 lg-mb-0 border-bottom border-2 border-secondary"
+						>
+							<i class="bi bi-card-list me-2 lg-me-0"></i>
+							<a class="nav-link" href="/list.html">List</a>
+						</li>
+						<li
+							style="width: fit-content"
+							class="nav-item d-flex align-items-center text-tertiary px-3 my-1 lg-mb-0"
+						>
+							<i class="bi bi-plus-circle me-2 lg-me-0"></i>
+							<a class="nav-link" href="/new.html">New</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<main>
+			<header>
+				<div class="p-5 bg-light">
+					<div class="container-fluid py-5">
+						<h1 class="display-5 fw-bold">Pet Inventory</h1>
+						<p class="col-md-8 fs-4">List of available pets.</p>
+					</div>
+				</div>
+			</header>
+			<div hidden id="pet-submit"></div>
+			<div hidden id="pet-update"></div>
+			<div hidden id="name"></div>
+			<div hidden id="type"></div>
+			<div hidden id="age"></div>
+
+			<!-- message container -->
+			<div class="container" id="message-container"></div>
+
+			<!-- table list of pets start -->
+			<section class="container my-5">
+				<div class="row">
+					<div class="col-12">
+						<table class="table table-striped table-hover">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th scope="col">Name</th>
+									<th scope="col">Type</th>
+									<th scope="col">Age</th>
+									<th scope="col">Actions</th>
+								</tr>
+							</thead>
+							<!-- pets will be added dynamically -->
+							<tbody id="pet-list"> </tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="bg-dark text-white container-fluid py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-6">
+						<h3>About</h3>
+						<p>
+							Pet Invetory is a simple web app that allows you to keep track of
+							your organization pets.
+						</p>
+					</div>
+					<div class="col-12 col-md-6">
+						<h3>Links</h3>
+						<ul class="list-disc">
+							<li>
+								<a href="/" class="text-white">Home</a>
+							</li>
+							<li>
+								<a href="/list.html" class="text-white">List</a>
+							</li>
+							<li>
+								<a href="/new.html" class="text-white">New</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+			crossorigin="anonymous"
+		></script>
+		<script src="./script.js"></script>
+	</body>
 </html>

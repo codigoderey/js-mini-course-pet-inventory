@@ -66,20 +66,52 @@
 				<div class="p-5 bg-light">
 					<div class="container-fluid py-5">
 						<h1 class="display-5 fw-bold">Pet Inventory</h1>
-						<p class="col-md-8 fs-4"
-							>Welcome to the Pet Inventory admin panel.</p
-						>
-						<a href="./list.html" class="btn btn-secondary btn-lg"
-							>See entire list</a
-						>
-						<a href="./new.html" class="btn btn-secondary btn-lg"
-							>Add new pet</a
-						>
+						<p class="col-md-8 fs-4">Update pet information.</p>
 					</div>
 				</div>
 			</header>
-		</main>
+			<div id="pet-submit"></div>
 
+			<!-- new pets bootstrap 5 form field -->
+			<section class="container my-5">
+				<div class="row">
+					<div class="col-12">
+						<form id="pet-update">
+							<div class="mb-3">
+								<label for="name" class="form-label">Name</label>
+								<input
+									type="text"
+									class="form-control"
+									id="name"
+									placeholder="Max"
+								/>
+							</div>
+							<div class="mb-3">
+								<label for="type" class="form-label">Type</label>
+								<input
+									type="text"
+									class="form-control"
+									id="type"
+									placeholder="Dog"
+								/>
+							</div>
+							<div class="mb-3">
+								<label for="age" class="form-label">Age</label>
+								<input
+									type="number"
+									class="form-control"
+									id="age"
+									placeholder="2"
+								/>
+							</div>
+							<button type="submit" class="btn btn-primary">Update</button>
+						</form>
+						<div id="message-container"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div hidden id="pet-list"></div>
 		<footer class="bg-dark text-white container-fluid py-5">
 			<div class="container">
 				<div class="row">
